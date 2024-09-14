@@ -7,23 +7,11 @@ const Counter = () => {
   const toggleCounterHandler = () => {};
 
   const incrementHandler = (num) => {
-    switch (num){
-      case 5:
-        dispatch({type: 'INCREMENTBY5'});
-        break;
-      default:
-        dispatch({type: 'INCREMENT'});
-    }
+        dispatch({type: 'INCREMENT', value:num});
   };
 
   const decrementHandler = (num) => {
-    switch (num){
-      case 5:
-        dispatch({type: 'DECREMENTBY5'});
-        break;
-      default:
-        dispatch({type: 'DECREMENT'});
-    }
+        dispatch({type: 'DECREMENT', value:num});
   };
 
   return (
